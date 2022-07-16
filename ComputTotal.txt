@@ -1,0 +1,27 @@
+USE [POS]
+GO
+/****** Object:  Trigger [dbo].[ComputTotal]    Script Date: 23/5/2022 08:50:58 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Munyaradzi Matindike>
+-- Create date: <05 May 2022>
+-- Description:	<Invoice Calculations>
+-- =============================================
+ALTER TRIGGER [dbo].[ComputTotal] 
+   ON  [dbo].[tbCart]
+   AFTER INSERT,DELETE,UPDATE
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON
+	UPDATE tbCart SET disc=((price*qty)*disc_percent *0.145)
+	UPDATE tbCart SET total=(price*qty)-disc
+
+
+    -- Insert statements for trigger here
+
+END

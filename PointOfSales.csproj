@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73262BED-BE80-48B4-8A7D-D7CBF6512379}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PointOfSales</RootNamespace>
+    <AssemblyName>PointOfSales</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Base Interface\bin\Release\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="RevmaxAPI, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\RevmaxAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Brand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Brand.Designer.cs">
+      <DependentUpon>Brand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrandModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrandModule.Designer.cs">
+      <DependentUpon>BrandModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelOrder.Designer.cs">
+      <DependentUpon>CancelOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryModule.Designer.cs">
+      <DependentUpon>CategoryModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailySale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailySale.Designer.cs">
+      <DependentUpon>DailySale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="Discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Discount.Designer.cs">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookUpProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookUpProduct.Designer.cs">
+      <DependentUpon>LookUpProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductModule.Designer.cs">
+      <DependentUpon>ProductModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductStockIn.Designer.cs">
+      <DependentUpon>ProductStockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qty.Designer.cs">
+      <DependentUpon>Qty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Qty1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qty1.Designer.cs">
+      <DependentUpon>Qty1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settle.Designer.cs">
+      <DependentUpon>Settle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockIn.Designer.cs">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierModule.Designer.cs">
+      <DependentUpon>SupplierModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccount.Designer.cs">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Void.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Void.Designer.cs">
+      <DependentUpon>Void.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Brand.resx">
+      <DependentUpon>Brand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrandModule.resx">
+      <DependentUpon>BrandModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelOrder.resx">
+      <DependentUpon>CancelOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryModule.resx">
+      <DependentUpon>CategoryModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailySale.resx">
+      <DependentUpon>DailySale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Discount.resx">
+      <DependentUpon>Discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookUpProduct.resx">
+      <DependentUpon>LookUpProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductModule.resx">
+      <DependentUpon>ProductModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductStockIn.resx">
+      <DependentUpon>ProductStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Qty.resx">
+      <DependentUpon>Qty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qty1.resx">
+      <DependentUpon>Qty1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settle.resx">
+      <DependentUpon>Settle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockIn.resx">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierModule.resx">
+      <DependentUpon>SupplierModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccount.resx">
+      <DependentUpon>UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Void.resx">
+      <DependentUpon>Void.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_management_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\void_30px.png" />
+    <None Include="Resources\void_50px.png" />
+    <None Include="Resources\delete_20px2.png" />
+    <None Include="Resources\delete_20px1.png" />
+    <None Include="Resources\globe_africa_100px1.png" />
+    <None Include="Resources\globe_africa_100px.png" />
+    <None Include="Resources\icons8_zimbabwe_64.png" />
+    <None Include="Resources\africa_100px.png" />
+    <None Include="Resources\icons8_female_profile_64.png" />
+    <None Include="Resources\icons8_password_64.png" />
+    <None Include="Resources\password_20px.png" />
+    <None Include="Resources\password_50px2.png" />
+    <None Include="Resources\female_profile_20px1.png" />
+    <None Include="Resources\female_profile_20px.png" />
+    <None Include="Resources\add_20px1.png" />
+    <None Include="Resources\name_20px.png" />
+    <None Include="Resources\password_50px1.png" />
+    <None Include="Resources\unity_symbol_100px1.png" />
+    <None Include="Resources\unity_symbol_100px.png" />
+    <None Include="Resources\unity_symbol_30px.png" />
+    <None Include="Resources\search_in_list_50px.png" />
+    <None Include="Resources\buy_30px.png" />
+    <None Include="Resources\search_50px.png" />
+    <None Include="Resources\remove_20px.png" />
+    <None Include="Resources\minus_20px.png" />
+    <None Include="Resources\add_20px.png" />
+    <None Include="Resources\user_50px.png" />
+    <None Include="Resources\user_30px.png" />
+    <None Include="Resources\ticket_purchase_100px.png" />
+    <None Include="Resources\ticket_purchase_50px.png" />
+    <None Include="Resources\exit_50px.png" />
+    <None Include="Resources\password_50px.png" />
+    <None Include="Resources\total_sales_50px.png" />
+    <None Include="Resources\shopping_cart_50px.png" />
+    <None Include="Resources\calculator_50px.png" />
+    <None Include="Resources\low_price_50px.png" />
+    <None Include="Resources\transaction_50px.png" />
+    <None Include="Resources\users_settings_30px1.png" />
+    <None Include="Resources\users_settings_30px.png" />
+    <None Include="Resources\supplier_30px.png" />
+    <None Include="Resources\search_20px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 2020.4</PostBuildEvent>
+  </PropertyGroup>
+</Project>
